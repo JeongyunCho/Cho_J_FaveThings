@@ -4,33 +4,34 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // get data from the db, and then send it through the route
-  // to the views/index.hbs page, and render that (including our DB data)
-  connect.query(`SELECT name, avatar FROM hero`,(err,result) => {
-    if(err){
-      throw err;
-      console.log(err);
-    } else{
-      console.log(result);
-  res.render('index', { avatars: result });
-    }
+  // get data from db and then send it through the route
+  // to the views/index.hbs and then render that (including our DB data)
+  connect.query(`SELECT * FROM tbl_favourite_jordans`, (err, result) => {
+      if (err) {
+        throw err;
+        console.log(err);
+      } else {
+        console.log(result);
+        res.render('index', { sneakers: result });
+      }
   });
+  
 });
 
-// get one hero's vio information
 
-router.get('/:hero', function(req, res, next) {
-  // get data from the db, and then send it through the route
-  // to the views/index.hbs page, and render that (including our DB data)
-  connect.query(`SELECT * FROM hero WHERE name = "${req.params.hero}"`,(err,result) => {
-    if(err){
-      throw err;
-      console.log(err);
-    } else{
-      console.log(result);
-  res.render('bio', { bioData: result[0] });
-    }
+router.get('/:jordan', function(req, res, next) {
+  // get data from db and then send it through the route
+  // to the views/index.hbs and then render that (including our DB data)
+  connect.query(`SELECT * FROM tbl_favourite_jordans WHERE sneakers_id = "${req.params.jordan}"`, (err, result) => {
+      if (err) {
+        throw err;
+        console.log(err);
+      } else {
+        console.log(result);
+        res.render('bio', { sneaker: result[0] });
+      }
   });
+  
 });
 
 module.exports = router;

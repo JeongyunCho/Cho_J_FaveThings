@@ -1,0 +1,27 @@
+body{
+    background-color: $bg-color !important;
+
+	.card1 {
+	margin-top: 70px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  }
+	
+	.img1 {
+	
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: -30px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); }
+    
+.btn-primary{
+    background-color: $infra !important;
+    border-color: $infra !important;
+}
+
+.detailPic{
+    width:inherit;
+}
+.content-text{
+    color: white;
+}
+}
