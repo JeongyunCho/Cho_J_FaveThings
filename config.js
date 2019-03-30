@@ -1,9 +1,9 @@
 const config = {
     user: "root",
-    password: "root", //leave this blank for windows
-    port: 8889, // for windows 3306
+    password: "", // leave this blank for windows
+    port: 3306, // for window 3306
     host: "localhost",
-    database: "marvelcharacters"
+    database: "db_air_jordan"
 }
 
 module.exports = config;

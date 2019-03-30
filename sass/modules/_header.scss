@@ -1,0 +1,44 @@
+.head {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%,#{fade-out($black, .5)} 75%,$black 100%), url('/images/jordans.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      letter-spacing: 0.8rem;
+      color: white;
+    }
+    h2 {
+      max-width: 20rem;
+      font-size: 1em;
+      color: white;
+    }
+    @media(min-width: 768px) {
+      margin-bottom: 2rem;
+      h1 {
+        font-size: $dsize2F;
+        line-height: $dsize2F;
+      }
+    }
+    @media(min-width: 992px) {
+      height: 50vh;
+      padding: 0;
+      h1 {
+        font-size: $dsize3F;
+        line-height: $dsize3F;
+        letter-spacing: 0.8rem;
+      }
+      h2 {
+        max-width: 30rem;
+        font-size: 1.25em;
+      }
+    }
+  }
+  

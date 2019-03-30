@@ -1,12 +1,20 @@
-<section id="heroes">
-    {{!-- this is a loop with handlebars --}}
-    {{#each avatars}}
-        <div class="hero-container">
-            <a href="/{{name}}">
-                <img src="/images/{{avatar}}" alt="avatar">
-            </a>
-                <h3 class="hero-name">{{name}}</h3>
-        </div>
-    
-    {{/each}}
-</section>
+<div class="container">
+<div class="row justify-content-center">    	
+{{#each sneakers}}
+  <div class="col-md-4">
+    <div class="card card1">
+      <a href="/{{sneakers_id}}">
+       <img src="/images/{{sneakers_img}}" class="img-fluid img1">
+      </a>
+
+      <div class="card-body">
+          <h3 class="mt-2">{{sneakers_name}}</h3>
+          <p>{{sneakers_subdesc}}</p>
+          <a href="/{{sneakers_id}}" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+{{/each}}
+</div>
+</div>
+
